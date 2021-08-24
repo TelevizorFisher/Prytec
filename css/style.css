@@ -1009,10 +1009,22 @@ body.ie ._ibg img {
 }
 
 .button-item {
-  background: #9e9dcb;
+  background-color: #9e9dcb;
   border-radius: 3px;
   color: #fff;
   padding: 11px 32px 11px 32px;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+}
+
+.button-item__link {
+  font-weight: 500;
+  color: inherit;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 .menu {
@@ -1036,6 +1048,9 @@ body.ie ._ibg img {
   margin: 0px 3px;
   padding: 5px 0px;
   position: relative;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 .menu__link {
@@ -1778,7 +1793,8 @@ textarea.form__input {
 .sail__button-body {
   width: 235px;
   height: 59px;
-  background: #ffc466;
+  background-color: #ffc466;
+  color: #9e9dcb;
   border-radius: 3px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1790,13 +1806,16 @@ textarea.form__input {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  cursor: pointer;
   -webkit-transform: translate(200px, 0px);
       -ms-transform: translate(200px, 0px);
           transform: translate(200px, 0px);
   opacity: 0;
-  -webkit-transition: all 0.4s ease 1s;
-  -o-transition: all 0.4s ease 1s;
-  transition: all 0.4s ease 1s;
+  -webkit-transition: opacity 0.4s ease 1s, background-color, color 0.4s, -webkit-transform;
+  transition: opacity 0.4s ease 1s, background-color, color 0.4s, -webkit-transform;
+  -o-transition: transform, opacity 0.4s ease 1s, background-color, color 0.4s;
+  transition: transform, opacity 0.4s ease 1s, background-color, color 0.4s;
+  transition: transform, opacity 0.4s ease 1s, background-color, color 0.4s, -webkit-transform;
 }
 
 .sail__button-body._active {
@@ -1811,7 +1830,6 @@ textarea.form__input {
   line-height: 26px;
   letter-spacing: 0.02em;
   text-transform: uppercase;
-  color: #9e9dcb;
 }
 
 .social__container {
@@ -2388,6 +2406,11 @@ textarea.form__input {
             align-items: center;
   }
 
+  .button-item__link {
+    font-size: 24px;
+    font-weight: 600;
+  }
+
   .menu__body {
     position: fixed;
     width: 100%;
@@ -2585,6 +2608,11 @@ textarea.form__input {
     background: rgba(242, 242, 242, 0.9);
   }
 
+  .button-item:hover {
+    background-color: #ffd869;
+    color: #000;
+  }
+
   .menu__item:hover .menu__sub-list {
     -webkit-transform: translate(0px, 0px);
         -ms-transform: translate(0px, 0px);
@@ -2611,6 +2639,15 @@ textarea.form__input {
 
   .menu-footer__link:hover {
     color: #ffc466;
+  }
+
+  .footer-bottom__link:hover {
+    color: #9e9dcb;
+  }
+
+  .sail__button-body:hover {
+    background-color: #ffd869;
+    color: #fff;
   }
 
   .slider-cooperate__slide:hover {
